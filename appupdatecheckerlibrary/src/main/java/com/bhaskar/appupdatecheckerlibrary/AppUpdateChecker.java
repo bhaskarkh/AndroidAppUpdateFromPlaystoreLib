@@ -3,6 +3,7 @@ package com.bhaskar.appupdatecheckerlibrary;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -10,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -60,7 +62,7 @@ public class AppUpdateChecker {
             //If the versions are not the same
             if(!currentVersion.equals(latestVersion)&&latestVersion!=null){
 
-                final Dialog epicDialog=new Dialog(activity);
+                /*final Dialog epicDialog=new Dialog(activity);
                 epicDialog.setContentView(R.layout.app_update_layout);
                 ImageView btnYes=epicDialog.findViewById(R.id.yesUpdate);
                 ImageView btnNo=epicDialog.findViewById(R.id.noUpdate);
@@ -85,10 +87,10 @@ public class AppUpdateChecker {
                     }
                 });
 
+*/
 
 
-
-                /* //
+                 //
                 final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle("An Update is Available");
                 builder.setMessage("Its better to update now");
@@ -108,7 +110,6 @@ public class AppUpdateChecker {
                 });
                 builder.setCancelable(false);
                 builder.show();
-                */
 
 
             }else {
